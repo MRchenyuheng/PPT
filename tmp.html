@@ -15,180 +15,122 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
+
+    <style>
+		h2.black-text{
+			color:black;
+		}
+		h3.black-text{
+			color:black;
+		}
+	</style>
+
+
 	<body>
 		<div class="reveal">
 			<div class="slides">
 
-				<section>
-					<h2>网络流初步</h2>
-				</section>
-                
-				<section>
-					<section data-markdown >
-						<textarea data-template>
-							## 形式化定义
-						</textarea>
-					</section>
-
-					<section data-markdown >
-						<textarea data-template>
-							设 $S$ 为源点
-
-							设 $T$ 为汇点
-						</textarea>
-					</section>
-
-					<section data-markdown >
-						<textarea data-template>
-							记$f[u \rightarrow v]$为$u \rightarrow v$的流量 
-
-							记$c[u \rightarrow v]$为$u \rightarrow v$的流量限制
-						</textarea>
-					</section>
-
-					<section data-markdown >
-						<textarea data-template>
-							合法流的充要条件
-
-							+ 反对称性 $f[u \rightarrow v] = -f[v \rightarrow u]$
-							
-							+ 内流量守恒 $\forall u \neq S,T   \displaystyle \sum_{a}{f[u \rightarrow a]} =0$​
-							  
-							+ 容量限制 $f[u \rightarrow v] \leq c[u \rightarrow v]$​
-
-						</textarea>
-					</section>
-
-					<section data-markdown >
-						<textarea data-template>
-							推论: 外部流量守恒 $\displaystyle \sum_{a} f[S \rightarrow a] = \sum_{b} f[b \rightarrow T]$
-						</textarea>
-					</section>
-
-			    </section>
-
-				<section>
-					<section data-markdown>
-						<textarea data-template>
-							## 最大流问题
-                            
-							找到一组可行流$f$并且最大化$\displaystyle \sum_{a} f[S \rightarrow a]$
-						</textarea>
-					</section>
+				<section data-background-image="./background/nju1.png"  *style="color:black"*>
+					
+						  <h2 class="black-text">1</h2>
+						  <h3 class="black-text">1</h2>
+					
 				</section>
 
-				<section>
-					<section data-markdown>
-						<textarea data-template>
-							## 残量网络的调整
-                        </textarea>
+				<section data-background-image= "./background/nju1.png"  *style="color:black"*>
+					
+					<section>
+					  <h2 class="black-text"> 11 </h2>
+				    </section>
+
+					<section>
+						<h3 class="black-text"> 1</h2>
+						<h3 class="black-text"> 1</h2>
 					</section>
 
-					<section data-markdown>
-						<textarea data-template>
-							记$r[u \rightarrow v]$为残量网络
+					<section>
+						<h3 class="black-text"> 1</h3>
+						<h3 class="black-text"> 1</h3>
+					</section>
+			  
+		        </section>
 
-							$r[u \rightarrow v] = c[u \rightarrow v] - f[u \rightarrow v]$
-                        </textarea>
+
+				<section data-background-image="./background/nju1.png"  *style="color:black"*>
+					
+					<section>
+						<h2 class="black-text"> 1</h2>
 					</section>
 
-					<section data-markdown>
-						<textarea data-template>
-							## 残量调整定理
-
-							源网络所有合法流可以在残量网络上调整而获得。
-						 </textarea>
+					<section>
+						<h2 class="black-text"> 1</h2>
+						<h2 class="black-text"> 1</h2>
 					</section>
 
+					<section>
+						<h2 class="black-text"> 1</h2>
+					</section>
+					
+			  
+		        </section>
 
-					<section data-markdown>
-						<textarea data-template>
-							## 残量调整定理
 
-							对于网络$c$,记可能的所有合法流的集合为 $F_{c}$
-							
-							对于任意一个$f_{0} \in F_{c}$
-                            
-							记 $r = c - f_{0}$
-							
-							则 $F_{c} = f_{0} + F_{r}$
-						 </textarea>
+				<section data-background-image= "./background/nju1.png"  *style="color:black"*>
+					
+					<section>
+					  <h2 class="black-text"> 1 </h2>
+				    </section>
+
+					<section>
+						<h3 class="black-text"> 1</h2>
+						<h3 class="black-text"> 1</h2>
+						<h3 class="black-text"> 1</h2>
 					</section>
 
-					<section data-markdown>
-						<textarea data-template>
-							## prof.
+					<section>
 
-							对于残量网络$r$
-							
-							由容量限制$r[u \rightarrow v] \geq 0$
-							
-							知残量网络是一个合法的网络。
-						 </textarea>
+						<h3 class="black-text"> 1</h2>
+						<h3 class="black-text"> 1</h2>
+	
 					</section>
+			  
+		        </section>
 
-					<section data-markdown>
-						<textarea data-template>
-							## prof.
-
-							对于某个 $f^{'} \in F_{r}$ 
-							
-							考虑$f^{'} + f$​
-							
-							有反对称性，内流量守恒，容量限制
-
-							前两者显然
-						 </textarea>
+				<section data-background-image= "./background/nju1.png"  *style="color:black"*>
+					
+					<section>
+						<h2 class="black-text"> 1</h2>
+						<h3 class="black-text"> 1 </h2>
 					</section>
+					
+		        </section>
 
-					<section data-markdown>
-						<textarea data-template>
-							## prof.容量限制 
-							
-							$f^{'}[u \rightarrow v] \leq r[u \rightarrow v] =  c[u \rightarrow v] - f[u \rightarrow v]$
-							
-							$ \Rightarrow f^{'}[u \rightarrow v] + f[u \rightarrow v] \leq c[u \rightarrow v]$
-						 </textarea>
+
+				<section data-background-image= "./background/nju1.png"  *style="color:black"*>
+					
+					<section>
+						<h2 class="black-text">111</h2>
+						<h3 class="black-text"> 111 </h2>
 					</section>
-
-					<section data-markdown>
-						<textarea data-template>
-							## 残量调整定理
-
-							即证$f + f^{'} \in F_{c}$
-							
-							我们称 $f + f^{'}$为网络$C$下的一个合法流。
-						 </textarea>
-					</section>
-
-					<section data-markdown>
-						<textarea data-template>
-							## 残量调整定理
-
-							根据反对称性对于$f[u \rightarrow v] = w \geq 0$
-							
-							有$f[v \rightarrow u] = -w$
-							
-							则 $-w \leq 0$
-							
-							这个流量的实际意义是
-							
-							对于不超过流量限制下的撤回
-						 </textarea>
-					</section>
-
-				</section>
+					
+		        </section>
 				
 
-				<section data-background-image="./background/2.jpg">
-					<h2>谢谢</h2>
-				</section>
+				<section data-background-image= "./background/nju1.png"  *style="color:black"*>
+					
+					<h2 class="black-text">11</h2>
+					<h3 class="black-text"> 1111</h2>
+			  
+		         </section>
+
+
 
 			</div>
 
 
 		</div>
 
+	
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -215,5 +157,6 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ,RevealMath ]
 			});
 		</script>
+
 	</body>
 </html>
